@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">    
+    
+<PreferenceCategory android:title="@string/locationSettings">
 
-	<PreferenceCategory android:title="@string/locationSettings">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+android:key="first_preferencescreen" android:title="@string/firstPreferencescreenTitle">			
+</PreferenceScreen>
 
-		<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-			android:key="first_preferencescreen" android:title="@string/firstPreferencescreenTitle">
+</PreferenceCategory>
 
-			
-		</PreferenceScreen>
-
-	</PreferenceCategory>
-
-	<PreferenceCategory android:title="@string/silentSettings">
+<PreferenceCategory android:title="@string/silentSettings">
 
 		<CheckBoxPreference android:key="disable"
-			android:title="@string/disableTitle"  android:defaultValue="false"
-
+			android:title="@string/disableTitle"  android:defaultValue="false" 
 			android:summary="@string/disableSummary" />
 		<ListPreference android:key="silentStart"
 			android:title="@string/silentStartTitle" android:dialogTitle="@string/silentStartDlgTitle"
@@ -39,7 +36,7 @@
 			android:entryValues="@array/mazhabValues" /> 
 		<ListPreference android:key="calendar" android:title="@string/calcMethodTitle"
 			android:dialogTitle="@string/calcMethodDlgTitle" android:entries="@array/calendarEntry"
-			android:defaultValue="UmmAlQuraUniv" android:entryValues="@array/calendarValues"  />
+			android:defaultValue="Makkah" android:entryValues="@array/calendarValues"  />
 
 		<ListPreference android:key="season" android:title="@string/seasonTitle"
 			android:dialogTitle="@string/seasonDlgTitle" android:entries="@array/season"

@@ -20,7 +20,13 @@
 			 
 			android:layout_width="fill_parent" android:layout_weight="1">
 			
-				<Button android:text="ايقاف التنبيه" android:textColor="#3C5413" android:id="@+id/button2" android:layout_width="wrap_content"  android:layout_height="wrap_content"></Button>
+				<Button
+				    android:id="@+id/button2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="Arrêter"
+				    android:textColor="#3C5413" >
+</Button>
 		</TableRow>
 	</TableLayout>
 

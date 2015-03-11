@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Salaty</string>
+    <string name="am">ص</string>
+    <string name="pm">م</string>
+    <string name="menu_preferences">Préfèrences</string>
+
+    <string-array name="mazhab">
+        <item name="1">Hanafi</item>
+        <item name="2">Shafii</item>
+    </string-array>
+
+    <string-array name="mazhabValues">
+        <item name="1">Hanafi</item>
+        <item name="2">Default</item>
+    </string-array>
+    <string-array name="season">
+        <item name="1">Eté</item>
+        <item name="2">Hiver</item>
+    </string-array>
+    <string-array name="seasonValues">
+        <item name="1">Summer</item>
+        <item name="2">Winter</item>
+    </string-array>
+    <string-array name="calendarEntry">
+            <item name="1">Ithna Ashari</item>
+      		<item name="2">University of Islamic Sciences, Karachi</item>
+      		<item name="3">Islamic Society of North America (ISNA)</item> 
+      		<item name="4">Muslim World League (MWL)</item> 
+      		<item name="5">Umm al-Qura, Makkah</item> 
+      		<item name="6">Egyptian General Authority of Survey</item>
+      		<item name="7">Institute of Geophysics, University of Tehran</item> 
+    </string-array>
+    <string-array name="calendarValues">
+        <item name="1">Jafari</item>
+        <item name="2">Karachi</item>
+        <item name="3">ISNA</item>
+        <item name="4">MWL</item>
+        <item name="5">Makkah</item>
+        <item name="6">Egypt</item>
+        <item name="7">Tehran</item>
+    </string-array>
+    
+    <string-array name="silentStartEntry">
+        <item name="immediately">Directement après l\'adhan</item>
+        <item name="minutes10">10 Minutes</item>
+        <item name="minutes20">20 Minutes</item>
+    </string-array>
+    <string-array name="silentStartEntryValues">
+        <item name="immediately">0</item>
+        <item name="minutes10">10</item>
+        <item name="minutes20">20</item>
+    </string-array>
+    <string-array name="silentDurationEntry">
+        <item>10 Minutes</item>
+        <item>20 Minutes</item>
+        <item>30 Minutes</item>
+    </string-array>
+    <string-array name="silentDurationEntryValues">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="notSoundEntry">
+        <item name="Disable">Silencieux</item>
+        <item name="short">Notification</item>
+        <item name="full">Adhan complet</item>
+    </string-array>
+    <string-array name="notSoundValues">
+        <item name="Disable">disable</item>
+        <item name="short">short</item>
+        <item name="full">full</item>
+    </string-array>
+
+    <string name="locationSettings">Emplacement de la ville</string>
+    <string name="firstPreferencescreenTitle">Ville</string>
+    <string name="autoCityTitle">Je recherches ma ville</string>
+    <string name="autoCitySummary">Rechercher ma ville par le satellite</string>
+    <string name="country">Pays</string>
+    <string name="countryDlgTitle">Choisir le pays</string>
+    <string name="city">Ville</string>
+    <string name="cityDlgTitle">Choisir la ville</string>
+    <string name="silentSettings">Mode silencieux</string>
+    <string name="disableTitle">Mode silencieux</string>
+    <string name="disableSummary">Mise en mode silencieux</string>
+    <string name="silentStartTitle">Début du mode silencieux</string>
+    <string name="silentStartDlgTitle">Quand débuter le mode silencieux ?</string>
+    <string name="silentStartSummary">Quand mettre en mode silencieux ? Dès que la prière commence ?</string>
+    <string name="silentDurationTitle">Durée du mode silencieux</string>
+    <string name="silentDurationSummary">Temps de mise en mode silencieux après l\'adhane</string>
+    <string name="silentDurationDlgTitle">Temps de mise en mode silencieux</string>
+    <string name="generalSettings">Paramètres</string>
+    <string name="notSoundTitle">Son de l\'appel</string>
+    <string name="notSoundDlgTitle">Son de l\'appel</string>
+    <string name="mazhabTitle">Ecole de jurisprudence</string>
+    <string name="mazhabDlgTitle">Mazhab</string>
+    <string name="mazhabSummary"></string>
+    <string name="seasonTitle">Saisons</string>
+    <string name="seasonDlgTitle">Saisons</string>
+    <string name="autoSearch">Recherches aléatoires</string>
+    <string name="manualSearch">Recherches manuels</string>
+    <string name="reSearch">Répéter une autre fois</string>
+    <string name="settings">Paramètres</string>
+    <string name="about">Infos</string>
+    <string name="close">Fermer</string>
+    <string name="minutes20">20 Minutes</string>
+    <string name="minutes30">30 Minutes</string>
+    <string name="minutes10">10 Minutes</string>
+    <string name="now">Directement après adhan</string>
+    <string name="autoSearchHowDisabled">خدمة  جي-بي-إس  و خدمة أبراج الشبكة  لاتعمل الآن ، في حال أردت أن تقوم بالبحث التلقائي عن المدينة فيجب تشغيلها ثم العودة مرة أخرى   ، سيتم نقلك الآن لإعدادات النظام </string>
+    <string name="autoSearchHowEnabled">خدمة  جي-بي-إس  أو خدمة أبراج الشبكة  تعمل ، سيتم البحث الآن  عن مدينتك</string>
+    <string name="notTitle">C\'est l\'heure de la prière</string>
+    <string name="notContent">Il est temps de prier</string>
+    <string name="teamName">Shefrah | Al Daffah Consulting</string>
+    <string name="gpsAndNetworkIsDisabled">Il n\'est actuellement pas possible de trouver votre position par GPS ou par Internet, essayer manuellement ?</string>
+    <string name="pleaseWait">Patienter SVP</string>
+    <string name="cancel">Annuler</string>
+    <string name="ok">OK</string>
+    <string name="noLocationFound">Votre ville na pas été trouvée depuis votre emplacement</string>
+    <string name="dialogAutoSearchMessage">سيتم البحث بإستخدام أبراج الشبكة أو خدمة جي-بي-إس ، تأكد من تفعيل إحدى الخدمتين ليتم العثور على المدينة</string>
+    <string name="version">v1.2</string>
+    <string name="website">http://aldaffah.biz/apps/salaty/</string>
+    <string name="calcMethodTitle">Méthode de calcul</string>
+    <string name="calcMethodDlgTitle">Méthode de clacul</string>
+    <string name="fajrtxt">Fajr</string>
+    <string name="duhrtxt">Dhuhr</string>
+    <string name="asrtxt">Asr</string>
+    <string name="magribtxt">Maghrib</string>
+    <string name="ishatxt">Isha</string>
+    <string name="remaintxt">Prochaine prière dans :</string>
+    <string name="citytxt">Ville</string>
+    <string name="azandoaa">اللهم ربَّ هذه الدعوة التامة ، والصلاة القائمة ، آت محمداً الوسيلة والفضيلة ، وابعثه اللهم مقاماً محموداً الذي وعدته.</string>
+    <string name="cityfinder_desc">Votre ville est :</string>
+    <string name="cityfinder_desc2">Votre ville est :</string>
+    <string name="cityfinder_searchInternet">Localisation par Internet</string>
+    <string name="cityfinder_searchWithoutInternet">Localisation par GPS</string>
+    <string name="cityfinder_nosearch">Localisation manuelle</string>
+    <string name="cityfinder_home">Paramètres par defaut</string>
+    <string name="cityfinder_research">Rechercher</string>
+    <string name="cityfinder_correct">OK</string>
+    <string name="noInternet">Impossible utilsation Internet refaire ou choisir manuellement</string>
+    <string name="noCityInDB">Une erreur est survenue en recherchant la ville refaire</string>
+    <string name="manualSearchDesc">Choisir le pays et la ville sinon nous envoyer le nom de votre ville pour que nous ajoutions</string>
+    <string name="cityUpdated">Emplacement identifié avec succès</string>
+    <string name="manualSearchSave">Définir la ville</string>
+    <string name="contact_us">Contact</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedbackEmail">boudeffa@gmail.com</string>
+    <string name="feedbackSubject">[Salaty][Feedback]</string>
+    <string name="feedbackBody">Ne pas oublier les informations sur votre Appareil et son OS</string>
+    <string name="feedbackChooserString">Choisissez votre Email</string>
+	<string name="feedbackFailed">Email envoi impossible</string>
+    <string name="contactusEmail">boudeffa@gmail.com</string>
+    <string name="contactusSubject">[Salaty][general]</string>
+    <string name="contactusBody">Ne pas oublier de mettre votre type appareil et son OS</string>
+    <string name="contactusChooserString">Choisir envoyer Email</string>
+	<string name="contactusFailed">Impossible envoi email de votre Mobile</string>
+</resources>

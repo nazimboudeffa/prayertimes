@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/secondary_background"
-    android:orientation="vertical" >
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:paddingBottom="40dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp" >
 
     <Button
         android:id="@+id/findCityHome"
@@ -34,40 +37,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/resultTextView"
-        android:layout_marginTop="29dp"
         android:text="@string/cityfinder_correct"
         android:visibility="gone" />
-
-    <Button
-        android:id="@+id/findCityUsingInternet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/resultTextView"
-        android:layout_marginTop="29dp"
-        android:text="@string/cityfinder_searchInternet" />
-
-    <Button
-        android:id="@+id/findCityNoInternet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/findCityUsingInternet"
-        android:gravity="center"
-        android:text="@string/cityfinder_searchWithoutInternet" />
-
-    <Button
-        android:id="@+id/nosearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/findCityNoInternet"
-        android:text="@string/cityfinder_nosearch"
-        android:visibility="visible" />
 
     <TextView
         android:id="@+id/dlgMsg"
@@ -78,7 +49,8 @@
         android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="@string/cityfinder_desc"
-        android:textColor="#444" />
+        android:textColor="#444"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/resultTextView"
@@ -86,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="  "
         android:textColor="#444" />
@@ -97,5 +70,33 @@
         android:layout_above="@+id/dlgMsg"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="37dp" />
+
+    <Button
+        android:id="@+id/findCityNoInternet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/findCityUsingInternet"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/cityfinder_searchWithoutInternet"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/nosearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/findCityNoInternet"
+        android:layout_centerHorizontal="true"
+        android:text="@string/cityfinder_nosearch"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/findCityUsingInternet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/findCityNoInternet"
+        android:layout_below="@+id/resultTextView"
+        android:text="@string/cityfinder_searchInternet"
+        android:visibility="visible" />
 
 </RelativeLayout>
