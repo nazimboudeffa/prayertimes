@@ -41,7 +41,7 @@
         android:text="@string/version"
         android:textColor="#5c6577"
         android:textStyle="bold" />
-
+<!--
     <Button
         android:id="@+id/feadbackButton"
         android:layout_width="wrap_content"
@@ -52,5 +52,5 @@
         android:gravity="center"
         android:text="@string/feedback"
         android:width="120dp" />
-
+-->
 </RelativeLayout>
