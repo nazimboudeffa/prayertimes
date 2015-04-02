@@ -2,6 +2,19 @@ package biz.aldaffah.salaty.ui;
 
 
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -12,36 +25,12 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import biz.aldaffah.salaty.R;
 import biz.aldaffah.salaty.helper.DatabaseHelper;
 import biz.aldaffah.salaty.helper.TimeHelper;
 import biz.aldaffah.salaty.helper.Typefaces;
-import biz.aldaffah.salaty.manager.*;
+import biz.aldaffah.salaty.manager.Manager;
 import biz.aldaffah.salaty.parameters.Preference;
-import biz.aldaffah.salaty.utils.ListAdapter;
-
-import biz.aldaffah.salaty.R;
-
-import android.app.Activity;
-import android.app.ListActivity;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.GpsStatus.Listener;
-import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
  
 /**
  * MainActivity represents main screen that is displayed to the user
@@ -150,24 +139,24 @@ public class Main extends Activity {
 			
 	        maListViewPerso = (ListView) findViewById(R.id.list);
 	        
-	        //Création de la ArrayList qui nous permettra de remplire la listView
+	        //Crï¿½ation de la ArrayList qui nous permettra de remplire la listView
 	        ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
 	 
-	        //On déclare la HashMap qui contiendra les informations pour un item
+	        //On dï¿½clare la HashMap qui contiendra les informations pour un item
 	        HashMap<String, String> map, map1, map2, map3, map4, map5;
 	   
-	        //Création d'une HashMap pour insérer les informations du premier item de notre listView
+	        //Crï¿½ation d'une HashMap pour insï¿½rer les informations du premier item de notre listView
 	        map = new HashMap<String, String>();
-	        //on insère un élément titre que l'on récupérera dans le textView titre créé dans le fichier affichageitem.xml
+	        //on insï¿½re un ï¿½lï¿½ment titre que l'on rï¿½cupï¿½rera dans le textView titre crï¿½ï¿½ dans le fichier affichageitem.xml
 	        map.put("prayer", "Fajr");
-	        //on insère un élément description que l'on récupérera dans le textView description créé dans le fichier affichageitem.xml
+	        //on insï¿½re un ï¿½lï¿½ment description que l'on rï¿½cupï¿½rera dans le textView description crï¿½ï¿½ dans le fichier affichageitem.xml
 	        map.put("time", prayersList.get(0));
-	        //on insère la référence à l'image (convertit en String car normalement c'est un int) que l'on récupérera dans l'imageView créé dans le fichier affichageitem.xml
+	        //on insï¿½re la rï¿½fï¿½rence ï¿½ l'image (convertit en String car normalement c'est un int) que l'on rï¿½cupï¿½rera dans l'imageView crï¿½ï¿½ dans le fichier affichageitem.xml
 	        //map.put("img", String.valueOf(R.drawable.word));
 	        //enfin on ajoute cette hashMap dans la arrayList
 	        listItem.add(map);
 	 
-	        //On refait la manip plusieurs fois avec des données différentes pour former les items de notre ListView
+	        //On refait la manip plusieurs fois avec des donnï¿½es diffï¿½rentes pour former les items de notre ListView
 	        map = new HashMap<String, String>();
 	        map.put("prayer", "Shourouk");
 	        map.put("time", prayersList.get(1));
@@ -207,7 +196,7 @@ public class Main extends Activity {
 	        SimpleAdapter mSchedule = new SimpleAdapter (this.getBaseContext(), listItem, R.layout.affichageitem,
 	                new String[] {"prayer", "time"}, new int[] {R.id.prayer, R.id.time});
 	  
-	        //On attribut à notre listView l'adapter que l'on vient de créer
+	        //On attribut ï¿½ notre listView l'adapter que l'on vient de crï¿½er
 	        maListViewPerso.setAdapter(mSchedule);
 	        maListViewPerso.setClickable(true); 		
 			maListViewPerso.setOnItemClickListener(new OnItemClickListener() {								
@@ -281,52 +270,31 @@ public class Main extends Activity {
 		remainingTime.setTypeface(Typefaces.get(this.getBaseContext(), "fonts/Roboto-Regular.ttf"));
 	}
 
-	// add main menu items
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add(0, 1, 1, getString(R.string.settings));
-		//menu.add(0, 1, 1, getString(R.string.settings));
-		// Don't have to see all this only Settings is better for a better interface
-		//Gone to main screen
-		menu.add(0, 3, 3, getString(R.string.about));
-		//find the current city automatically
-		// Gone in the settings
-		//menu.add(0, 4, 4, getString(R.string.autoCityTitle));
-				 
-		return true;
-	}
-	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-
-		switch (item.getItemId()) {
-		case 1:
-			// run Settings screen
-			Intent myIntent = new Intent(this, Settings.class);
-			startActivity(myIntent);
-			return true;
-		case 3:
-			// run About screen 
-			Intent MyIntent = new Intent (this , About.class);
-			startActivity(MyIntent);
-			
-			return true;
-		case 4:
-			// run auto city finder dialog .
-			//new AutoCityMainActivity(this, dialog).startSearch();
-			//return true;
-		case 5:
-			// run City Finder Activity
-			Intent cityFinderActivity = new Intent (this , CityFinder.class);
-			startActivity(cityFinderActivity);
-			
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-
-	}
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_about:
+                // Comportement du bouton "A Propos"
+                // run About screen
+                Intent MyIntent = new Intent (this , About.class);
+                startActivity(MyIntent);
+                return true;
+            case R.id.menu_settings:
+                // Comportement du bouton "ParamÃ¨tres"
+                // run Settings screen
+                Intent myIntent = new Intent(this, Settings.class);
+                startActivity(myIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 	// update the view on resume
 	public void onResume(){
@@ -352,13 +320,6 @@ public class Main extends Activity {
 		Intent cityFinderActivity = new Intent (this , CityFinder.class);
 		startActivity(cityFinderActivity);		   
 	}
-	
-	public void infosClick(View view) {  
-		  //Implement image click function  
-		Intent aboutActivity = new Intent (this , About.class);
-		startActivity(aboutActivity);
-	}
-	
-	
+
 
 }

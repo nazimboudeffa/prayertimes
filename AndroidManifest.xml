@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="biz.aldaffah.salaty"
     android:versionCode="15"
-    android:versionName="1.2" >
+    android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="7" />
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -35,11 +35,6 @@
             android:name="biz.aldaffah.salaty.ui.Settings"
             android:screenOrientation="portrait" >
         </activity>
-        <activity 
-        android:name="biz.aldaffah.salaty.ui.Preferences"
-		android:label="Earthquake Preferences"
-		android:screenOrientation="portrait" >
-		</activity>
         <activity
             android:name="biz.aldaffah.salaty.ui.Alert"
             android:noHistory="true"

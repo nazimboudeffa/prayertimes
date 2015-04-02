@@ -4,7 +4,6 @@
     <string name="app_name">Salaty</string>
     <string name="am">ص</string>
     <string name="pm">م</string>
-    <string name="menu_preferences">Préfèrences</string>
 
     <string-array name="mazhab">
         <item name="1">Hanafi</item>
@@ -101,8 +100,7 @@
     <string name="autoSearch">Recherches aléatoires</string>
     <string name="manualSearch">Recherches manuels</string>
     <string name="reSearch">Répéter une autre fois</string>
-    <string name="settings">Paramètres</string>
-    <string name="about">Infos</string>
+
     <string name="close">Fermer</string>
     <string name="minutes20">20 Minutes</string>
     <string name="minutes30">30 Minutes</string>
@@ -156,4 +154,6 @@
     <string name="contactusBody">Ne pas oublier de mettre votre type appareil et son OS</string>
     <string name="contactusChooserString">Choisir envoyer Email</string>
 	<string name="contactusFailed">Impossible envoi email de votre Mobile</string>
+    <string name="menu_about">A propos</string>
+    <string name="menu_settings">Préfèrences</string>
 </resources>
